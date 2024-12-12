@@ -30,7 +30,7 @@ If you are using the default password encoder, then there are no preparation ste
 
 === Update `Pbkdf2PasswordEncoder`
 
-If you are xref:features/authentication/password-storage.adoc#authentication-password-storage-pbkdf2[using `Pbkdf2PasswordEncoder`], the constructors are replaced with static factories that refer to the Spring Security version that the given settings apply to.
+If you are using xref:features/authentication/password-storage.adoc#authentication-password-storage-pbkdf2[`Pbkdf2PasswordEncoder`], the constructors are replaced with static factories that refer to the Spring Security version that the given settings apply to.
 
 ==== Replace Deprecated Constructor Usage
 
@@ -178,7 +178,7 @@ fun passwordEncoder(): PasswordEncoder {
 
 === Update `SCryptPasswordEncoder`
 
-If you are xref:features/authentication/password-storage.adoc#authentication-password-storage-scrypt[using `SCryptPasswordEncoder`], the constructors are replaced with static factories that refer to the Spring Security version that the given settings apply to.
+If you are using xref:features/authentication/password-storage.adoc#authentication-password-storage-scrypt[`SCryptPasswordEncoder`], the constructors are replaced with static factories that refer to the Spring Security version that the given settings apply to.
 
 ==== Replace Deprecated Constructor Usage
 
@@ -272,7 +272,7 @@ fun passwordEncoder(): PasswordEncoder {
 
 === Update `Argon2PasswordEncoder`
 
-If you are xref:features/authentication/password-storage.adoc#authentication-password-storage-argon2[using `Argon2PasswordEncoder`], the constructors are replaced with static factories that refer to the Spring Security version that the given settings apply to.
+If you are using xref:features/authentication/password-storage.adoc#authentication-password-storage-argon2[`Argon2PasswordEncoder`], the constructors are replaced with static factories that refer to the Spring Security version that the given settings apply to.
 
 ==== Replace Deprecated Constructor Usage
 
