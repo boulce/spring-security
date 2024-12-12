@@ -166,10 +166,11 @@ Kotlin::
 ----
 @Bean
 fun passwordEncoder(): PasswordEncoder {
-    String prefix = "pbkdf2@5.8"
-    PasswordEncoder current = // ... see previous step
-    PasswordEncoder upgraded = Pbkdf2PasswordEncoder.defaultsForSpringSecurity_v5_8()
-    DelegatingPasswordEncoder delegating = new DelegatingPasswordEncoder(prefix, Map.of(prefix, upgraded))
+    val prefix = "pbkdf2@5.8"
+    val current: PasswordEncoder = // ... see previous step
+    val upgraded: PasswordEncoder = Argon2PasswordEncoder.defaultsForSpringSecurity_v5_8()
+
+    val delegating = DelegatingPasswordEncoder(prefix, mapOf(prefix to upgraded))
     delegating.setDefaultPasswordEncoderForMatches(current)
     return delegating
 }
@@ -260,10 +261,11 @@ Kotlin::
 ----
 @Bean
 fun passwordEncoder(): PasswordEncoder {
-    String prefix = "scrypt@5.8"
-    PasswordEncoder current = // ... see previous step
-    PasswordEncoder upgraded = SCryptPasswordEncoder.defaultsForSpringSecurity_v5_8()
-    DelegatingPasswordEncoder delegating = new DelegatingPasswordEncoder(prefix, Map.of(prefix, upgraded))
+    val prefix = "pbkdf2@5.8"
+    val current: PasswordEncoder = // ... see previous step
+    val upgraded: PasswordEncoder = Argon2PasswordEncoder.defaultsForSpringSecurity_v5_8()
+
+    val delegating = DelegatingPasswordEncoder(prefix, mapOf(prefix to upgraded))
     delegating.setDefaultPasswordEncoderForMatches(current)
     return delegating
 }
